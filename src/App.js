@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Search from "./components/Search";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [state, setState] = useState({
+		searchQuery: "",
+		results: [],
+		selected: {},
+	});
+
+	const apiurl = "http://www.omdbapi.com/?apikey=bf410ecf";
+
+	const search = e => {
+		if (e.key === "Enter") {
+			axios(apiurl + "&s=" + state.searchQuery).then(data => {
+				console.log(data);
+			});
+		}
+	};
+
+	const handleInput = e => {
+		let searchQuery = e.target.value;
+		setState(previousState => {
+			return { ...previousState, searchQuery: searchQuery };
+		});
+		console.log(state.searchQuery);
+	};
+
+	return (
+		<div className="App">
+			<header>
+				<h1>Works?</h1>
+			</header>
+			<main>
+				<Search handleInput={handleInput} search={search} />
+			</main>
+		</div>
+	);
 }
 
 export default App;
