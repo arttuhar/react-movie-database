@@ -2,9 +2,9 @@
 
 ## Table of contents
 
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
 ## General info
 
@@ -14,21 +14,28 @@ Simple movie database app. You can search for a movie and results will load belo
 
 App is made by using
 
-* React
+- React
 
 API from
 
-* The open movie database (OMDb API)
+- The open movie database (OMDb API)
 
 ## Setup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clone down this repository. You will need node and npm installed on your machine.
 
-### Available Scripts
+Installation:
 
-In the project directory, you can run:
+`npm install`
 
-`yarn start`
+Run test:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm test`
+
+Start server:
+
+`npm start`
+
+Visit app:
+
+`localhost:3000`
