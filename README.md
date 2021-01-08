@@ -4,6 +4,7 @@
 
 - [General info](#general-info)
 - [Technologies](#technologies)
+- [Project status](#project-status)
 - [Setup](#setup)
 
 ## General info
@@ -19,6 +20,13 @@ App is made by using
 API from
 
 - The open movie database (OMDb API)
+
+## Project status
+
+Project is currently in development. Next steps will be:
+
+- More content to pages
+- Fixes to styling
 
 ## Setup
 
