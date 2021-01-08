@@ -25,7 +25,6 @@ API from
 
 Project is currently in development. Next steps will be:
 
-- More content to pages
 - Fixes to styling
 
 ## Setup
