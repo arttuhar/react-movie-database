@@ -8,7 +8,9 @@ function Popup({ selected, closePopup }) {
 					{selected.Title}
 					<span> ({selected.Year})</span>
 				</h2>
-				<p className="rating">Rating: {selected.imbdRating}</p>
+				<p className="rating">
+					<i class="fas fa-star"></i> {selected.imdbRating}
+				</p>
 				<div className="info">
 					<img src={selected.Poster} alt="Poster" />
 					<p>{selected.Plot}</p>
