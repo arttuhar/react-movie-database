@@ -33,7 +33,7 @@ function App() {
 	};
 
 	const openPopup = id => {
-		axios(apiurl + "&i=" + id).then(({ data }) => {
+		axios(apiurl + "&i=" + id + "&plot=full").then(({ data }) => {
 			let result = data;
 			setState(previousState => {
 				return { ...previousState, selected: result };
@@ -50,7 +50,7 @@ function App() {
 	return (
 		<div className="App">
 			<header>
-				<h1>React Movie Database</h1>
+				<h1>RMDb</h1>
 			</header>
 			<main>
 				<Search handleInput={handleInput} search={search} />
